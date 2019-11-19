@@ -1,4 +1,4 @@
-package com.mhuman.myapplication
+package com.mhuman.movieplot
 
 import org.junit.Test
 

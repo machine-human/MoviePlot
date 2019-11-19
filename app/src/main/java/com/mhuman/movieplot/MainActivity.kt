@@ -1,4 +1,4 @@
-package com.mhuman.myapplication
+package com.mhuman.movieplot
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
