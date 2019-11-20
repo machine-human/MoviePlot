@@ -33,6 +33,7 @@ def getTheMovieDataBaseApiKey() {
 }
     koin_version = '2.0.1'
     leakcanary_version = '2.0-beta-4'
+    rxjava_version = '2.1.0'
 }
 
 dependencies {
@@ -50,4 +51,7 @@ dependencies {
     implementation "org.koin:koin-androidx-ext:$koin_version"
     //leakcanary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+    //rxjava
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxjava_version"
 }
