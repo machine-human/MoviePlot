@@ -34,6 +34,7 @@ def getTheMovieDataBaseApiKey() {
     koin_version = '2.0.1'
     leakcanary_version = '2.0-beta-4'
     rxjava_version = '2.1.0'
+    retrofit_version = '2.6.0'
 }
 
 dependencies {
@@ -54,4 +55,8 @@ dependencies {
     //rxjava
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxjava_version"
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 }
