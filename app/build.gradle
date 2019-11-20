@@ -23,6 +23,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled = true
+    }
 def getTheMovieDataBaseApiKey() {
     def properties = new Properties()
     properties.load(project.rootProject.file('key.properties').newDataInputStream())
