@@ -14,6 +14,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //APi Keys
+        buildConfigField 'String', 'THE_MOVIE_API_KEY', "\"" + getTheMovieDataBaseApiKey() + "\""
     }
     buildTypes {
         release {
@@ -21,6 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+def getTheMovieDataBaseApiKey() {
+    def properties = new Properties()
+    properties.load(project.rootProject.file('key.properties').newDataInputStream())
+    return properties.getProperty("TheMovieDataBaseApiKey");
+}
 }
 
 dependencies {
