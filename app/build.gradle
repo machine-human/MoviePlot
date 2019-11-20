@@ -36,6 +36,7 @@ def getTheMovieDataBaseApiKey() {
     rxjava_version = '2.1.0'
     retrofit_version = '2.6.0'
     okhttp_version = '4.2.2'
+    glide_version = '4.10.0'
 }
 
 dependencies {
@@ -62,4 +63,7 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
     //okhttp
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+    //glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide_version"
 }
