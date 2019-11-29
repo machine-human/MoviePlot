@@ -54,6 +54,7 @@ ext {
     glide_version = '4.10.0'
     paging_version = '2.1.0'
     kakao_version = '1.25.0'
+    anko_version='0.10.8'
 }
 
 dependencies {
@@ -103,4 +104,6 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     //kakao
     implementation "com.kakao.sdk:kakaolink:$kakao_version"
+    //anko
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
 }
