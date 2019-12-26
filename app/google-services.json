@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "140103015604",
+    "firebase_url": "https://movieplot.firebaseio.com",
+    "project_id": "movieplot",
+    "storage_bucket": "movieplot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140103015604:android:4c79ee560d4f3a40a48be1",
+        "android_client_info": {
+          "package_name": "com.mhuman.movieplot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140103015604-41qiijpgh1hiju85pqf9j3hu3h0gjj9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuUzIiWgQlL0SBVqJM_wqOtFlJPGqRXkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140103015604-41qiijpgh1hiju85pqf9j3hu3h0gjj9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
