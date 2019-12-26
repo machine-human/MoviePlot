@@ -1,3 +1,76 @@
 <resources>
     <string name="app_name">MoviePlot</string>
+    <!--bottom navigation menu-->
+    <string name="menu_first_tap_title">영화 목록</string>
+    <string name="menu_second_tap_title">카테고리</string>
+    <string name="menu_third_tap_title">찜 목록</string>
+    <string name="menu_fourth_tap_title">설정</string>
+
+    <!--categories menu-->
+    <string name="action">액션</string>
+    <string name="korea">한국영화</string>
+    <string name="animation">애니</string>
+
+    <string name="comedy">코미디</string>
+    <string name="crime">범죄</string>
+    <string name="drama">드라마</string>
+
+    <string name="fantasy">판타지</string>
+    <string name="horror">공포</string>
+    <string name="romance">로맨스</string>
+
+    <string name="science_fiction">SF</string>
+    <string name="thriller">스릴러</string>
+    <string name="war">전쟁</string>
+
+    <string name="light_theme">밝은 테마</string>
+    <string name="dark_theme">어두운 테마</string>
+    <string name="send_opinion">작성하기</string>
+
+    <!--dumy text-->
+    <string name="dummy_movie_overview">홀어머니와 사는 아서 플렉(호아킨 피닉스)은 코미디언을 꿈꾸지만 그의 삶은 좌절과 절망으로 가득 차 있다. 광대 아르바이트는 그에게 모욕을 가져다주기 일쑤고, 긴장하면 웃음을 통제할 수 없는 신경병 증세는 그를 더욱 고립시킨다. 정부 예산 긴축으로 인해 정신과 약물을 지원하던 공공의료 서비스마저 없어져 버린 어느 날, 아서는 지하철에서 시비를 걸어온 증권사 직원들에게 얻어맞던 와중에 동료가 건네준 권총으로 그들을 쏴 버리고 만다. 군중들은 지배계급에 대한 저항의 아이콘이 된 그를 추종하기 시작하며 광대 마스크로 얼굴을 가리고 거리로 쏟아져 나오기 시작하는데...</string>
+
+    <!--setting list title-->
+    <string name="setting_tab_first_title">테마</string>
+    <string name="setting_tab_second_title">의견</string>
+    <string name="setting_tab_third_title">현재 버전</string>
+    <string name="detail_tab_first_title">등장 인물</string>
+
+    <!--button text-->
+    <string name="share">친구에게 추천하기</string>
+    <string name="favorite">찜 하기</string>
+
+    <!--keyworkd id-->
+    <string name="tag_action">257137</string>
+    <string name="tag_war">6091</string>
+    <string name="tag_animation">256791</string>
+    <string name="tag_comedy">248206</string>
+    <string name="tag_crime">258272</string>
+    <string name="tag_drama">231197</string>
+    <string name="tag_fantasy">258111</string>
+    <string name="tag_horror">8087</string>
+    <string name="tag_romance">9840</string>
+    <string name="tag_sf">228436</string>
+    <string name="tag_thriller">9950</string>
+    <string name="tag_korea">10586</string>
+
+    <!--toast & alert & error-->
+    <string name="msg_delete_all">찜 목록을 \'전체 삭제\' 하시겠습니까?</string>
+    <string name="msg_favorite_movie_list_is_empty">찜 목록이 존재하지 않습니다.</string>
+    <string name="msg_success_save_favorite_movie">찜 목록에 \'추가\' 되었습니다.</string>
+    <string name="msg_success_delete_favorite_movie">찜 목록에서 \'삭제\' 되었습니다.</string>
+    <string name="msg_failed_save_favorite_movie">찜 목록에 추가를 \'실패\'하였습니다.</string>
+    <string name="msg_failed_delete_favorite_movie">찜 목록에서 삭제를 \'실패\'하였습니다.</string>
+    <string name="msg_failed_request_data">데이터 요청을 실패하였습니다.</string>
+    <string name="msg_failed_request_cast_list_data">해당 영화의 등장 인물 데이터가\n서버에 존재하지 않습니다.</string>
+    <string name="msg_apply_dark_theme">\'어두운 테마\'로 설정되었습니다.</string>
+    <string name="msg_apply_light_theme">\'밝은 테마\'로 설정되었습니다.</string>
+    <string name="msg_empty_request_data">데이터 요청을 실패하였습니다.</string>
+    <string name="msg_empty_overview">줄거리가 없습니다.</string>
+    <string name="msg_empty_favorite_movie_list">영화 상세 페이지에서 \'찜 목록\'을 추가해주세요.</string>
+    <string name="msg_description_back_finish">\'뒤로\' 버튼을 한번 더 누르시면 종료됩니다.</string>
+    <string name="msg_description_write_movie_title">영화 제목을 입력해주세요.</string>
+
+    <!--hint-->
+    <string name="hint_search_movie_list">영화 제목을 입력해주세요.</string>
 </resources>
