@@ -40,13 +40,13 @@ def getTheMovieDataBaseApiKey() {
     return properties.getProperty("TheMovieDataBaseApiKey");
 }
 
-def getYouTubeApiKey(){
+def getYouTubeApiKey() {
     def properties = new Properties()
     properties.load(project.rootProject.file('key.properties').newDataInputStream())
     return properties.getProperty("YouTubeApiKey");
 }
 
-def getNaverSearchUrl(){
+def getNaverSearchUrl() {
     def properties = new Properties()
     properties.load(project.rootProject.file('key.properties').newDataInputStream())
     return properties.getProperty("NaverSearchUrl");
