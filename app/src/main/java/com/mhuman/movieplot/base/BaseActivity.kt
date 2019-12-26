@@ -5,8 +5,7 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import androidx.fragment.app.Fragment
-import com.mhuman.movieplot.R
+import org.jetbrains.anko.toast
 
 abstract class BaseActivity<B : ViewDataBinding>(
     @LayoutRes
@@ -19,11 +18,17 @@ abstract class BaseActivity<B : ViewDataBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.inflate(layoutInflater, layoutResId, null, false)
-        binding.lifecycleOwner = this
+        binding.lifecycleOwner = this@BaseActivity
         setContentView(binding.root)
     }
 
     protected fun binding(action: B.() -> Unit) {
         binding.run(action)
     }
+
+    protected fun showToastMessage(message: String) {
+        toast(message)
+    }
+
+    abstract fun registerEvent()
 }

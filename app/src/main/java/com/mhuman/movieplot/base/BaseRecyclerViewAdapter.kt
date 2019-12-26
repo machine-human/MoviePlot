@@ -10,7 +10,11 @@ abstract class BaseRecyclerViewAdapter<T> : RecyclerView.Adapter<BaseViewHolder<
         holder.bind(items[position])
     }
 
-    override fun getItemCount(): Int = items.size
+    override fun getItemCount(): Int = if (items == null) 0 else items.size
+
+    override fun getItemId(position: Int): Long {
+        return super.getItemId(position)
+    }
 
     fun setList(data: List<T>) {
         clear()
@@ -25,7 +29,6 @@ abstract class BaseRecyclerViewAdapter<T> : RecyclerView.Adapter<BaseViewHolder<
         if (data == null) {
             return
         }
-
         val startIndex = items.size
         items.addAll(startIndex, data)
         notifyItemRangeInserted(startIndex, data.size)
@@ -42,7 +45,8 @@ abstract class BaseRecyclerViewAdapter<T> : RecyclerView.Adapter<BaseViewHolder<
 
     fun remove(position: Int) {
         items.removeAt(position)
-        notifyItemRemoved(position)
+//        notifyItemRemoved(position)
+        notifyDataSetChanged()
     }
 
     fun change(position: Int, data: T) {

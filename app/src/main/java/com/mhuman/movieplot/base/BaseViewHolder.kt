@@ -13,6 +13,5 @@ abstract class BaseViewHolder<T,B : ViewDataBinding>(
     parent: ViewGroup
 ): RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(layoutResId, parent, false)) {
     protected var binding: B = DataBindingUtil.bind(itemView)!!
-
     abstract fun bind(data: T)
 }

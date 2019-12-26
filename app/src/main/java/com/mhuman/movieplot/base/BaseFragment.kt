@@ -7,12 +7,16 @@ import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.databinding.library.baseAdapters.BR
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
-import com.mhuman.movieplot.BR
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.toast
+import org.jetbrains.anko.yesButton
 
 abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
-    @LayoutRes private val layoutResId: Int
+    @LayoutRes
+    private val layoutResId: Int
 ) : Fragment() {
 
     protected lateinit var binding: B
@@ -40,4 +44,16 @@ abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
     protected fun binding(action: B.() -> Unit) {
         binding.run(action)
     }
+
+    protected fun showToastMessage(message: String) {
+        context?.toast(message)
+    }
+
+    protected fun showAlertDialog(title: String, action: () -> Unit) {
+        context?.alert(title) {
+            this.yesButton { action() }
+        }?.show()
+    }
+
+    abstract fun registerEvent()
 }
