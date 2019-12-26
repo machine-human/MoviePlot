@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id='@+id/action_257137'
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/action" />
+
+    <item
+        android:id="@+id/war_6091"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/war" />
+
+    <item
+        android:id="@+id/animation_256791"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/animation" />
+
+    <item
+        android:id="@+id/comedy_248206"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/comedy" />
+
+    <item
+        android:id="@+id/crime_258272"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/crime" />
+
+    <item
+        android:id="@+id/drama_257236"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/drama" />
+
+    <item
+        android:id="@+id/fantasy_258111"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/fantasy" />
+
+    <item
+        android:id="@+id/horror_8087"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/horror" />
+
+    <item
+        android:id="@+id/romance_9840"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/romance" />
+
+    <item
+        android:id="@+id/sf_228436"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/science_fiction" />
+
+    <item
+        android:id="@+id/thriller_9950"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_grey_700"
+        android:title="@string/thriller" />
+
+    <item
+        android:id="@+id/korea_10586"
+        android:icon="@drawable/ic_movie_black_24dp"
+        android:iconTint="@color/md_red_600"
+        android:title="@string/korea" />
+
+</menu>
