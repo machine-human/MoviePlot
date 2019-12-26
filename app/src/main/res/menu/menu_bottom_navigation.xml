@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_movie"
+        android:icon="@drawable/ic_list_black_24dp"
+        android:title="@string/menu_first_tap_title" />
+    <item
+        android:id="@+id/menu_favorite"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/menu_third_tap_title" />
+    <item
+        android:id="@+id/menu_setting"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/menu_fourth_tap_title" />
+</menu>
