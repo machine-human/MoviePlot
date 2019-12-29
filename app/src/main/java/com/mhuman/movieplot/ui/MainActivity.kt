@@ -63,6 +63,30 @@ class MainActivity : BaseActivity<ActivityMainBinding>(
             super.onBackPressed()
     }
 
+    override fun initializeUI() {
+        view_pager_main.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) = Unit
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) = Unit
+
+            override fun onPageSelected(position: Int) {
+                bottom_navigation_main.menu.getItem(position).isChecked = true
+            }
+        })
+
+        bottom_navigation_main.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.menu_movie -> view_pager_main.currentItem = 0
+                R.id.menu_favorite -> view_pager_main.currentItem = 1
+                R.id.menu_setting -> view_pager_main.currentItem = 2
+            }
+            true
+        }
+    }
+
     override fun registerEvent() {
         with(viewModel) {
             liveSettingInfoResult.observe(this@MainActivity, Observer {

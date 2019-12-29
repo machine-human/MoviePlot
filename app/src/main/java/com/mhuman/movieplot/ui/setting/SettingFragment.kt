@@ -15,7 +15,6 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class SettingFragment :
     BaseFragment<FragmentSettingBinding, SettingViewModel>(R.layout.fragment_setting) {
 
-
     override val viewModel by viewModel<SettingViewModel>()
     private val settingInfoResult: MutableList<SettingInfoResult> = mutableListOf()
 
@@ -25,8 +24,10 @@ class SettingFragment :
             view = this@SettingFragment
         }
         registerEvent()
+    }
 
-        floating_button_send_opinion.setOnClickListener { context?.browse("https://www.naver.com") }
+    override fun initializeUI() {
+        floating_button_send_opinion.setOnClickListener { context?.browse(BuildConfig.MY_APPLICATION_PLAY_STORE_URL) }
         floating_button_check_version.text = BuildConfig.VERSION_NAME
     }
 

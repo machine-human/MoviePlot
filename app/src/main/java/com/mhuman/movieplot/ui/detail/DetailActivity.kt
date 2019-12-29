@@ -45,18 +45,20 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(R.layout.activity_det
             recycler_view_cast_list.layoutManager =
                 LinearLayoutManager(this@DetailActivity, RecyclerView.HORIZONTAL, false)
         }
-
         registerEvent()
-
         with(viewModel) {
             loadTrailerList(intent.getIntExtra(EXTRA_MOVIE_ID, 0))
             loadCastList(intent.getIntExtra(EXTRA_MOVIE_ID, 0))
         }
 
+
+    }
+
+    override fun initializeUI() {
         text_view_movie_title_content.apply {
             text = intent.getStringExtra(EXTRA_MOVIE_TITLE)
         }
-
+ 
         card_view_movie_title.setOnClickListener {
             browse(BuildConfig.NAVER_SEARCH_URL + intent.getStringExtra(EXTRA_MOVIE_TITLE))
         }
