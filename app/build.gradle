@@ -21,6 +21,7 @@ android {
         buildConfigField 'String', 'THE_MOVIE_API_KEY', "\"" + getTheMovieDataBaseApiKey() + "\""
         buildConfigField 'String', 'YOU_TUBE_API_KEY', "\"" + getYouTubeApiKey() + "\""
         buildConfigField 'String', 'NAVER_SEARCH_URL', "\"" + getNaverSearchUrl() + "\""
+        buildConfigField 'String', 'MY_APPLICATION_PLAY_STORE_URL', "\"" + getMyApplicationPlayStoreUrl() + "\""
     }
     buildTypes {
         release {
@@ -54,6 +55,12 @@ def getNaverSearchUrl() {
     def properties = new Properties()
     properties.load(project.rootProject.file('key.properties').newDataInputStream())
     return properties.getProperty("NaverSearchUrl");
+}
+
+def getMyApplicationPlayStoreUrl() {
+    def properties = new Properties()
+    properties.load(project.rootProject.file('key.properties').newDataInputStream())
+    return properties.getProperty("MyApplicationPlayStoreUrl");
 }
 
 ext {
