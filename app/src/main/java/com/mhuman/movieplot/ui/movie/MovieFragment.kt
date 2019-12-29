@@ -19,6 +19,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class MovieFragment :
     BaseFragment<FragmentMovieBinding, MovieViewModel>(R.layout.fragment_movie),
     ModalBottomSheetDialogFragment.Listener {
+
     override val viewModel by viewModel<MovieViewModel>()
     private val pagingAdpater: MoviePagingAdapter by lazy { MoviePagingAdapter() }
 
@@ -27,10 +28,11 @@ class MovieFragment :
         binding {
             recycler_view_movie_list.adapter = pagingAdpater
         }
-
         registerEvent()
         showMovieList(null, null)
+    }
 
+    override fun initializeUI() {
         edit_text_search_movie.makeClearableEditText(null, null)
 
         floating_button_genre.setOnClickListener { setDialogBuilder() }

@@ -23,14 +23,19 @@ class FavoriteFragment :
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-
         binding {
             //            recyclerViewAdapter.setHasStableIds(true)
             recycler_view_favorite_movie_list.adapter = recyclerViewAdapter
         }
-
         registerEvent()
+    }
 
+    override fun onResume() {
+        super.onResume()
+        viewModel.loadFavoriteMovieList()
+    }
+
+    override fun initializeUI() {
         with(viewModel) {
             floating_button_favorite_movie_list_clear.setOnClickListener {
                 if (liveFavoriteMovieList.value?.size == 0 || liveFavoriteMovieList.value == null)
@@ -41,11 +46,6 @@ class FavoriteFragment :
                     }
             }
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-        viewModel.loadFavoriteMovieList()
     }
 
     override fun onItemLongSelected(view: View, position: Int) {

@@ -1,5 +1,6 @@
 package com.mhuman.movieplot.ui.detail
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.Observer
@@ -26,6 +27,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
 class DetailActivity : BaseActivity<ActivityDetailBinding>(R.layout.activity_detail) {
+
     private val viewModel by viewModel<DetailViewModel>()
     private val recyclerViewAdapter: DetailRecyclerViewAdapter by lazy { DetailRecyclerViewAdapter() }
     private val movieInfoList: MutableList<MovieInfoList> = mutableListOf()
@@ -45,14 +47,16 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(R.layout.activity_det
             recycler_view_cast_list.layoutManager =
                 LinearLayoutManager(this@DetailActivity, RecyclerView.HORIZONTAL, false)
         }
-
         registerEvent()
-
         with(viewModel) {
             loadTrailerList(intent.getIntExtra(EXTRA_MOVIE_ID, 0))
             loadCastList(intent.getIntExtra(EXTRA_MOVIE_ID, 0))
         }
 
+
+    }
+
+    override fun initializeUI() {
         text_view_movie_title_content.apply {
             text = intent.getStringExtra(EXTRA_MOVIE_TITLE)
         }
@@ -92,6 +96,12 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(R.layout.activity_det
                     LinkObject.newBuilder()
                         .setWebUrl(KAKAO_BASE_LINK)
                         .setMobileWebUrl(KAKAO_BASE_LINK)
+                        .setAndroidExecutionParams(
+                            "movieId=" + intent.getIntExtra(EXTRA_MOVIE_ID, 0)
+                                    + "&movieTitle=" + intent.getStringExtra(EXTRA_MOVIE_TITLE)
+                                    + "&moviePosterPath=" + intent.getStringExtra(EXTRA_MOVIE_POSTER_PATH)
+                                    + "&movieOverView=" + intent.getStringExtra(EXTRA_MOVIE_OVERVIEW)
+                        )
                         .build()
                 )
                     .setDescrption(intent.getStringExtra(EXTRA_MOVIE_OVERVIEW))
@@ -101,8 +111,12 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(R.layout.activity_det
                     "앱에서 바로 확인", LinkObject.newBuilder()
                         .setWebUrl(KAKAO_BASE_LINK)
                         .setMobileWebUrl(KAKAO_BASE_LINK)
-                        .setAndroidExecutionParams("123")
-                        .build()
+                        .setAndroidExecutionParams(
+                            "movieId=" + intent.getIntExtra(EXTRA_MOVIE_ID, 0)
+                                    + "&movieTitle=" + intent.getStringExtra(EXTRA_MOVIE_TITLE)
+                                    + "&moviePosterPath=" + intent.getStringExtra(EXTRA_MOVIE_POSTER_PATH)
+                                    + "&movieOverView=" + intent.getStringExtra(EXTRA_MOVIE_OVERVIEW)
+                        ).build()
                 )
             )
             .build()

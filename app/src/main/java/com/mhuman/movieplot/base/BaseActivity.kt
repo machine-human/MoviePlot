@@ -20,6 +20,7 @@ abstract class BaseActivity<B : ViewDataBinding>(
         binding = DataBindingUtil.inflate(layoutInflater, layoutResId, null, false)
         binding.lifecycleOwner = this@BaseActivity
         setContentView(binding.root)
+        initializeUI()
     }
 
     protected fun binding(action: B.() -> Unit) {
@@ -31,4 +32,5 @@ abstract class BaseActivity<B : ViewDataBinding>(
     }
 
     abstract fun registerEvent()
+    abstract fun initializeUI()
 }
