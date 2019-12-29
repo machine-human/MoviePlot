@@ -38,6 +38,7 @@ abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
         binding {
             binding.lifecycleOwner = this@BaseFragment
             binding.setVariable(BR.vm, viewModel)
+            initializeUI()
         }
     }
 
@@ -56,4 +57,5 @@ abstract class BaseFragment<B : ViewDataBinding, VM : ViewModel>(
     }
 
     abstract fun registerEvent()
+    abstract fun initializeUI()
 }
