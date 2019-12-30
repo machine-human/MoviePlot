@@ -23,13 +23,25 @@ android {
         buildConfigField 'String', 'NAVER_SEARCH_URL', "\"" + getNaverSearchUrl() + "\""
         buildConfigField 'String', 'MY_APPLICATION_PLAY_STORE_URL', "\"" + getMyApplicationPlayStoreUrl() + "\""
     }
+
+    signingConfigs {
+        release {
+            storeFile file(getKeyStorePath())
+            storePassword getKeyStorePWD()
+            keyAlias getKeyStoreAlias()
+            keyPassword getKeyStoreAliasPWD()
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -61,6 +73,31 @@ def getMyApplicationPlayStoreUrl() {
     def properties = new Properties()
     properties.load(project.rootProject.file('key.properties').newDataInputStream())
     return properties.getProperty("MyApplicationPlayStoreUrl");
+}
+
+///////////////////// KeyStore /////////////////////
+def getKeyStorePath() {
+    def properties = new Properties()
+    properties.load(project.rootProject.file('key.properties').newDataInputStream())
+    return properties.getProperty('KeyStorePath');
+}
+
+def getKeyStorePWD() {
+    def properties = new Properties()
+    properties.load(project.rootProject.file('key.properties').newDataInputStream())
+    return properties.getProperty('KeyStorePwd');
+}
+
+def getKeyStoreAlias() {
+    def properties = new Properties()
+    properties.load(project.rootProject.file('key.properties').newDataInputStream())
+    return properties.getProperty('KeyStoreAlias');
+}
+
+def getKeyStoreAliasPWD() {
+    def properties = new Properties()
+    properties.load(project.rootProject.file('key.properties').newDataInputStream())
+    return properties.getProperty('KeyStoreAliasPwd');
 }
 
 ext {
