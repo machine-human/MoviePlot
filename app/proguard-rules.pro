@@ -88,3 +88,13 @@
   public *;
 }
 ############## END GLIDE ##############
+
+############## END KAKAO ##############
+-keep class com.kakao.** { *; }
+-keepattributes Signature
+-keepclassmembers class * {
+  public static <fields>;
+  public *;
+}
+-dontwarn android.support.v4.**,org.slf4j.**,com.google.android.gms.**
+############## END KAKAO ##############
