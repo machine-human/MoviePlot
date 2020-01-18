@@ -49,7 +49,7 @@ MoviePlot은 최신 또는 지난 영화의 줄거리, 포스터, 예고편 등�
 - [Anko(수정 예정)](https://github.com/Kotlin/anko)
 - [Glide](https://github.com/bumptech/glide)
 - [LeakCanary](https://github.com/square/leakcanary)
-- [Fabric](https://github.com/firebase/quickstart-android/tree/master/crash)
+- [Crashlytics](https://github.com/firebase/quickstart-android/tree/master/crash)
 - [AAC](https://github.com/android/architecture-components-samples)
   - LiveData
   - Paging
